@@ -11,7 +11,7 @@ Dialer.prototype = {
                         alert("Error occurred: " + e);
                     },
                     'Dialer', 'dial',
-                    [options]);
+                    {"123"});
 	},
 };
 
