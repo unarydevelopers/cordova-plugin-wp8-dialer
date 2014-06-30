@@ -3,8 +3,8 @@ var Dialer = function () {
 };
 
 Dialer.prototype = {
-	options = options || {};
 	dial: function (options) {
+		alert('plugin dial called');
 		cordova.exec(
                     alert('success'),
                     function (e) {
