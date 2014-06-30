@@ -7,8 +7,7 @@ Dialer.prototype = {
 		cordova.exec(
                     alert('success'),
                     function (e) {
-                        console.log("Error occurred: " + e);
-                        document.getElementById('res').innerHTML = "Error occurred: " + e;
+                        alert("Error occurred: " + e);
                     },
                     "Dialer", "dial",
                     [options]);
