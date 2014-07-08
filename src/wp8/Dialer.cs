@@ -15,10 +15,10 @@ namespace Cordova.Extension.Commands
         public void dial(string options)
         {
             string phoneNumber = JsonHelper.Deserialize<string[]>(options)[0];
-			string contactName = JsonHelper.Deserialize<string[]>(options)[1];
+			//string contactName = JsonHelper.Deserialize<string[]>(options)[1];
 			PhoneCallTask phoneCallTask = new PhoneCallTask();
             phoneCallTask.PhoneNumber = phoneNumber;
-			phoneCallTask.DisplayName = contactName;
+			//phoneCallTask.DisplayName = contactName;
             phoneCallTask.Show();
             this.DispatchCommandResult(new PluginResult(PluginResult.Status.OK, phoneNumber));
         }
