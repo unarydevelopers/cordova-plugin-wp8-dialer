@@ -25,5 +25,5 @@ window.dial = function(str) {
 		alert("Success dialing");
 	}, function(err) {
         alert("Error dialing" + err);
-    }, "Dialer", "dial", str);
+    }, "Dialer", "dial", [str]);
 };
