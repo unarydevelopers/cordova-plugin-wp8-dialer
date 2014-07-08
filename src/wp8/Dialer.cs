@@ -18,7 +18,7 @@ namespace Cordova.Extension.Commands
         }
         public void dial(string options)
         {
-            DialerParameters phoneNumber = JsonHelper.Deserialize<String[]>(options)[0];
+            DialerParameters phoneNumber = JsonHelper.Deserialize<DialerParameters>(options);
             PhoneCallTask phoneCallTask = new PhoneCallTask();
             phoneCallTask.PhoneNumber = phoneNumber.number;
             phoneCallTask.Show();
