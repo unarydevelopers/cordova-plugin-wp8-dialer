@@ -3,5 +3,5 @@ window.dial = function(number, name) {
 		console.log("Success dialling");
 	}, function(err) {
         console.log("Error: " + err);
-    }, "Dialer", "dial", [number]);
+    }, "Dialer", "dial", [number, name]);
 };
