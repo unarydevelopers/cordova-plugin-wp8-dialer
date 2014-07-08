@@ -24,6 +24,6 @@ window.dial = function(str) {
     cordova.exec(function(){
 		alert("Success dialing");
 	}, function(err) {
-        alert("Error dialing");
+        alert("Error dialing" + err);
     }, "Dialer", "dial", str);
 };
