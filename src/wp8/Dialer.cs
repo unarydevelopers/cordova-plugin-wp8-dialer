@@ -12,17 +12,18 @@ namespace Cordova.Extension.Commands
 {
     public class Dialer : BaseCommand
     {
-        public class DialerParameters
+        /*public class DialerParameters
         {
             public string number { get; set; }
-        }
+        }*/
         public void dial(string options)
         {
-            DialerParameters phoneNumber = JsonHelper.Deserialize<DialerParameters>(options);
+            string phoneNumber = JsonHelper.Deserialize<string[]>(options)[0];
+			//phoneNumber.number = options;
             PhoneCallTask phoneCallTask = new PhoneCallTask();
-            phoneCallTask.PhoneNumber = phoneNumber.number;
+            phoneCallTask.PhoneNumber = phoneNumber;
             phoneCallTask.Show();
-            this.DispatchCommandResult(new PluginResult(PluginResult.Status.OK, phoneNumber.number));
+            this.DispatchCommandResult(new PluginResult(PluginResult.Status.OK, phoneNumber));
         }
     }
 }
