@@ -20,16 +20,21 @@
     
     <!-- wp8 -->
     <platform name="wp8">
-        <config-file target="config.xml" parent="/*">
-            <feature name="Dialer">
-                <param name="wp-package" value="Dialer"/>
-            </feature>
+	
+		<config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_PHONEDIALER"/>
         </config-file>
 		<!-- interface -->
 		<js-module src="www/dialer.js" name="Dialer">
 			<clobbers target="plugin.dial" />
 		</js-module>
 
+        <config-file target="config.xml" parent="/*">
+            <feature name="Dialer">
+                <param name="wp-package" value="Dialer"/>
+            </feature>
+        </config-file>
+		
         <source-file src="src/wp8/Dialer.cs" />
     </platform>
 </plugin>
